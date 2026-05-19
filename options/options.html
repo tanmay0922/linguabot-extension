@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LinguaBot Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🌐 LinguaBot Settings</h1>
+        <p>Configure your language converter extension</p>
+      </div>
+
+      <div class="card">
+        <h2>API Key</h2>
+        <p class="desc">
+          Get your free API key from
+          <a href="https://console.groq.com" target="_blank">console.groq.com</a>.
+          Completely free — 14,400 requests/day, no credit card needed.
+        </p>
+        <div class="field">
+          <label for="apiKey">Groq API Key</label>
+          <div class="input-row">
+            <input
+              type="password"
+              id="apiKey"
+              placeholder="gsk_..."
+              autocomplete="off"
+            />
+            <button class="toggle-btn" id="toggleKey">Show</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Default Language</h2>
+        <p class="desc">Choose the language you want responses in by default.</p>
+        <div class="field">
+          <label for="targetLanguage">Response Language</label>
+          <select id="targetLanguage">
+            <option value="English">English</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Italian">Italian</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Chinese (Simplified)">Chinese (Simplified)</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+            <option value="Russian">Russian</option>
+            <option value="Dutch">Dutch</option>
+            <option value="Turkish">Turkish</option>
+            <option value="Polish">Polish</option>
+            <option value="Swedish">Swedish</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Urdu">Urdu</option>
+            <option value="Indonesian">Indonesian</option>
+            <option value="Thai">Thai</option>
+            <option value="Vietnamese">Vietnamese</option>
+            <option value="Greek">Greek</option>
+            <option value="Hebrew">Hebrew</option>
+            <option value="Swahili">Swahili</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="save-btn" id="saveBtn">Save Settings</button>
+
+      <div class="toast" id="toast">Settings saved!</div>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

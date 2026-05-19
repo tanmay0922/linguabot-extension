@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "LinguaBot - Language Converter",
+  "version": "1.0.0",
+  "description": "Type in any language, get answers in yours. Powered by Claude AI.",
+  "permissions": ["storage", "contextMenus", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["https://api.anthropic.com/*", "https://api.groq.com/*", "https://generativelanguage.googleapis.com/*"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"]
+    }
+  ],
+  "options_page": "options/options.html"
+}
